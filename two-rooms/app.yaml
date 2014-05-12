@@ -7,42 +7,35 @@ threadsafe: yes
 handlers:
 - url: /favicon\.ico
   static_files: static/img/favicon.ico
-  upload: favicon\.ico
+  upload: static/img/favicon\.ico
 
 - url: /css/(.*)
   static_files: static/css/\1
-  upload: css/(.*)
+  upload: static/css/(.*)
 
 - url: /js/(.*)
   static_files: static/js/\1
-  upload: js/(.*)
-
-- url: /js/(.*)
-  static_files: static/js/\1
-  upload: js/(.*)
+  upload: static/js/(.*)
 
 - url: /partials/(.*)
   static_files: static/partials/\1
-  upload: partials/(.*)
+  upload: static/partials/(.*)
 
 - url: /sound/(.*)
   static_files: static/sound/\1
-  upload: sound/(.*)
+  upload: static/sound/(.*)
 
 - url: /img/(.*)
   static_files: static/img/\1
-  upload: img/(.*)
+  upload: static/img/(.*)
 
 - url: /bower_components/(.*)
   static_files: static/bower_components/\1
-  upload: bower_components/(.*)
+  upload: static/bower_components/(.*)
 
 - url: /
   static_files: static/index.html
-  upload: index.html
-
-- url: .*
-  script: main.app
+  upload: static/index.html
 
 libraries:
 - name: webapp2
